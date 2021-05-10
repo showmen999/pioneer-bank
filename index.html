@@ -38,7 +38,7 @@
            <div class="col-md-4">
                <div class="balance status">
                 <h5>Balance</h5>
-                <h3>$ <span id="current">1240</span></h3>
+                <h3>$ <span id="currentBalance">1240</span></h3>
                </div>
            </div>
        </div>
@@ -86,7 +86,7 @@
             // const totalDeposit = depositNumber + currentDepositNumber;
             // document.getElementById("currentDeposit").innerText = totalDeposit;
             updateSpanText('currentDeposit',depositNumber);
-            updateSpanText('current',depositNumber);
+            updateSpanText('currentBalance',depositNumber);
 
             document.getElementById("depositAmount").value ="";
 
@@ -107,6 +107,8 @@
             const withdrawAmountNumber = parseFloat(withdrawAmount);
 
             updateSpanText('currentWithdrawAmount',withdrawAmountNumber);
+            updateSpanText('currentBalance',-1*withdrawAmountNumber);
+
 
             document.getElementById('withdrawAmount').value = "";
 
